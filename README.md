@@ -12,4 +12,12 @@ User can add new posts from the list of blog postings
 ![Home Page](/images/HomePage.png)  
 
 # Blog Page
-![Blog Page]
+![Blog Page](/images/IndexPage.png)  
+
+# Blog Post Page
+![Blog Post Page](/images/ShowPage.png)  
+# Reviews Page (stretch)
+![Reviews Page](/images/ReviewsPage.png)   
+
+# Contact/Login Page (stretch)
+![Contact/Login Page](/images/ContactPage.png)
