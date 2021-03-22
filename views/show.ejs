@@ -5,6 +5,11 @@
 
 <h1 class="homeh1">Wren's Monster Blog</h1>
 <h3><%= beast.name %></h3>
+<img class="blog-img" src="<%= beast.img%>">
+<div class="blog-blurb">
+	<p>Location: <%= beast.location%></p>
+	<p><%= beast.description%></p>
+</div>
 <form method='POST' action="/wren/blog/<%=beast.id%>/?_method=DELETE">
 	<button>Delete post</button>
 </form>

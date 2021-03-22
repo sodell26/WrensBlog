@@ -5,7 +5,8 @@ const beastSchema = new Schema({
 	name: {type: String, required: true},
 	location: String,
 	description: String,
-	dispatched: Boolean
+	dispatched: Boolean,
+	img: String
 });
 
 const Beast = model('Beast', beastSchema)

@@ -16,8 +16,26 @@ body {
 }
 
 .homeBlurb {
-	color: #5DB07C;
+	color: #324236;
 	margin-top: 20px;
+}
+
+.blog-img {
+	background:  rgba(255,255,255,1);
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%
+}
+
+.blog-blurb {
+	background: rgb(124, 145, 130, 1);
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+p {
+	color: #324236;
 }
 
 footer {
