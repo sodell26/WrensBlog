@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<%- include('./partials/header.ejs') %>
+<%- include('./partials/nav.ejs') %>
+
+<h1 class="homeh1">Wren's Monster Blog</h1>
+<h3>Edit <%=beast.name%></h3>
+
+<form method="POST" action="/wren/blog/<%= beast.id%>?_method=PUT">
+	<input type="text" name="name" value="<%=beast.name%>">
+	<input type="text" name="location" value="<%=beast.location%>">
+	<input type="textarea" name="description" value="<%=beast.description%>">
+	Dispatched? <input type="checkbox" name="dispatched"
+	<% if (beast.dispatched) { %>
+	checked
+	<% } %>
+	>
+	<br>
+	<br>
+	<input type="submit" value="Save Changes">
+</form>
+
+<%- include('./partials/footer.ejs') %>

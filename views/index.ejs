@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<%- include('./partials/header.ejs') %>
+<%- include('./partials/nav.ejs') %>
+	<h1 class="homeh1">Wren's Monster Blog</h1>
+	<ul>
+		<% for(let i=0; i < beasts.length; i++) { %>
+			<li>
+				<a href="/wren/blog/<%= beasts[i].id %>"><%= beasts[i].name %></a>
+			</li>
+
+		<% } %>
+	</ul>
+<a href="/wren/blog/new">Add a new beast</a>
+
+
+<%- include('./partials/footer.ejs') %>

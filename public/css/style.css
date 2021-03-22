@@ -1,0 +1,26 @@
+body {
+	background: url("https://cdn.pixabay.com/photo/2015/09/09/16/05/forest-931706_1280.jpg") no-repeat center center fixed;
+}
+
+.homeh1 {
+	text-align: center;
+}
+
+.carousel-background {
+	background: rgba(255,255,255,1);
+}
+
+.carousel-inner img{
+	width: 400px;
+	height: 400px !important;
+}
+
+.homeBlurb {
+	color: #5DB07C;
+	margin-top: 20px;
+}
+
+footer {
+	text-align: center;
+	color: #5E8F70;
+}
