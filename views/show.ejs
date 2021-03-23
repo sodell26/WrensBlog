@@ -10,9 +10,10 @@
 	<p>Location: <%= beast.location%></p>
 	<p><%= beast.description%></p>
 </div>
+<a href="/wren/blog"><button class="btn btn-info back-btn">Back to Blog Listings</button></a>
+<a href="/wren/blog/<%=beast.id%>/edit"><button class="btn btn-warning edit-btn">Edit Post</button></a>
 <form method='POST' action="/wren/blog/<%=beast.id%>/?_method=DELETE">
-	<button>Delete post</button>
+	<button class="btn btn-danger delete-btn">Delete post</button>
 </form>
-<a href="/wren/blog/<%=beast.id%>/edit"><button>Edit Post</button></a>
 
 <%- include('./partials/footer.ejs') %>

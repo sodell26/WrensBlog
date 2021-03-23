@@ -3,15 +3,28 @@
 <%- include('./partials/header.ejs') %>
 <%- include('./partials/nav.ejs') %>
 	<h1 class="homeh1">Wren's Monster Blog</h1>
-	<ul>
-		<% for(let i=0; i < beasts.length; i++) { %>
-			<li>
-				<a href="/wren/blog/<%= beasts[i].id %>"><%= beasts[i].name %></a>
-			</li>
+	<div class="d-flex flex-row flex-wrap align-items-start bd-highlight justify-content-start mb-3">
+			<% for(let i=0; i < beasts.length; i++) { %>
+			<div class="bd-highlight flex-wrap p-2 mb-3">
+				<ul class="beast-item">
+						<li>
+							<a href="/wren/blog/<%= beasts[i].id %>"><img class="link-pic" src="<%=beasts[i].img%>"></a>				
+						</li>
+					
+			
+				</ul>
 
-		<% } %>
-	</ul>
-<a href="/wren/blog/new">Add a new beast</a>
-
+				<ul class="beast-item">
+					
+						<li class="beast-link">
+							<a class="link-name btn btn-outline-success" href="/wren/blog/<%= beasts[i].id %>"><%= beasts[i].name %></a>
+						</li>
+				</ul>
+				</div>
+			<% } %>
+	</div>
+<div class="btn-center">
+	<a class="btn btn-light new-btn" href="/wren/blog/new">Add a new beast</a>
+</div>
 
 <%- include('./partials/footer.ejs') %>

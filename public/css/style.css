@@ -20,6 +20,12 @@ body {
 	margin-top: 20px;
 }
 
+.beast-item {
+	list-style-type: none;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+
 .blog-img {
 	background:  rgba(255,255,255,1);
 	display: block;
@@ -28,10 +34,59 @@ body {
 	width: 50%
 }
 
+.link-pic {
+	background:  rgba(255,255,255,1);
+	width: 150px;
+	height: 130px;
+}
+
+.beast-link {
+	margin-top: 10px;
+}
+
+.link-name {
+	color: #8BC4A6;
+	background: rgb(13, 43, 42, 1);
+}
+
+.beast-item-name {
+	margin-bottom: 20px;
+}
+
+.new-btn {
+	background-color: #8D9967;
+}
+
+.btn-center {
+	text-align: center;
+}
+
+.back-btn {
+	color: #8BC4A6;
+	background-color: #133F3D;
+}
+
+.edit-btn {
+	background-color: #3E9981;
+}
+
+.delete-btn {
+	background-color: #E9C729;
+}
+
+.blog-img {
+	height: 300px;
+	width: auto;
+}
+
 .blog-blurb {
 	background: rgb(124, 145, 130, 1);
 	margin-left: 5%;
 	margin-right: 5%;
+}
+
+a {
+	text-decoration: none;
 }
 
 p {
@@ -40,5 +95,5 @@ p {
 
 footer {
 	text-align: center;
-	color: #5E8F70;
+	color: #8BC4A6;
 }
