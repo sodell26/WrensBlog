@@ -2,6 +2,31 @@ body {
 	background: url("https://cdn.pixabay.com/photo/2015/09/09/16/05/forest-931706_1280.jpg") no-repeat center center fixed;
 }
 
+.my-navbar{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #F5EBC6
+}
+
+.my-navbar li{
+	float: left;
+}
+
+.my-navbar li a {
+	display: block;
+	color: #8BC4A6;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+.my-navbar li a:hover {
+	background-color: #0D2B2A;
+}
+
+
 .homeh1 {
 	text-align: center;
 }
@@ -16,8 +41,12 @@ body {
 }
 
 .homeBlurb {
-	color: #324236;
 	margin-top: 20px;
+}
+
+.homeBlurb p {
+	background: rgb(13, 43, 42, 1);
+	color: #F5EBC6;
 }
 
 .beast-item {
@@ -54,7 +83,7 @@ body {
 }
 
 .new-btn {
-	background-color: #8D9967;
+	background-color: #E9C729;
 }
 
 .btn-center {
@@ -64,13 +93,17 @@ body {
 .back-btn {
 	color: #8BC4A6;
 	background-color: #133F3D;
+	margin-left: 3%;
 }
 
 .edit-btn {
 	background-color: #3E9981;
+	margin-left: 1%;
 }
 
 .delete-btn {
+	margin-top: 20px;
+	margin-left: 3%;
 	background-color: #E9C729;
 }
 
