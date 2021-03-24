@@ -3,6 +3,20 @@ const router = express.Router();
 
 const Beast = require('../models/beastsModel.js')
 
+const multer = require('multer');
+const path = require('path'); 
+
+const storage = multer.diskStorage({
+	destination: './public/uploads',
+	filename: (req,file,cb) => {
+		cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
+	}
+});
+
+const upload = multer({storage: storage})
+
+
+
 //home page
 router.get('/', (req,res) => {
 	res.render('home.ejs')

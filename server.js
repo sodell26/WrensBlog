@@ -11,6 +11,11 @@ const methodOverride = require('method-override');
 
 app.use(methodOverride('_method'));
 
+//body parser
+app.use(express.urlencoded({extended:true}))
+app.use(express.json());
+app.set('view engine', "ejs")
+
 const mongoURI = process.env.MONGODBURI
 
 const db = mongoose.connection;
