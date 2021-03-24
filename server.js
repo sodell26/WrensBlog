@@ -12,8 +12,8 @@ const methodOverride = require('method-override');
 
 app.use(methodOverride('_method'));
 
-//body parser
-app.use(express.json());
+// //body parser
+// app.use(express.json());
 
 //maybe for multer
 // app.set('view engine', "ejs")
