@@ -3,24 +3,25 @@ const router = express.Router();
 
 const Beast = require('../models/beastsModel.js')
 
-const multer = require('multer');
-const path = require('path'); 
+//multer maybe
+// const multer = require('multer');
+// const path = require('path'); 
 
-const storage = multer.diskStorage({
-	destination: './public/uploads',
-	filename: (req,file,cb) => {
-		cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
-	}
-});
+// const storage = multer.diskStorage({
+// 	destination: './public/uploads',
+// 	filename: (req,file,cb) => {
+// 		cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
+// 	}
+// });
 
-const upload = multer({storage: storage})
+// const upload = multer({storage: storage})
 
 
 
-//home page
-router.get('/', (req,res) => {
-	res.render('home.ejs')
-})
+// //home page <-- moved to server.js for sessions/users use
+// router.get('/', (req,res) => {
+// 	res.render('home.ejs')
+// })
 
 //index
 router.get('/blog', (req,res) => {
@@ -29,7 +30,7 @@ router.get('/blog', (req,res) => {
 			console.log(err)
 			next(err)
 		} else {
-			res.render('index.ejs', {beasts: foundBeasts})
+			res.render('index.ejs', {beasts: foundBeasts, currentUser: req.session.currentUser})
 		}
 
 	})
@@ -84,13 +85,13 @@ router.get('/blog', (req,res) => {
 
 //new route
 router.get('/blog/new', (req,res) => {
-	res.render('new.ejs')
+	res.render('new.ejs', {currentUser: req.session.currentUser})
 })
 
 //show route
 router.get('/blog/:id', (req, res) => {
 	Beast.findById(req.params.id, (err, foundBeast) => {
-		res.render('show.ejs', {beast: foundBeast})
+		res.render('show.ejs', {beast: foundBeast, currentUser: req.session.currentUser})
 	})
 })
 
@@ -128,7 +129,7 @@ router.delete('/blog/:id', (req,res) => {
 router.get('/blog/:id/edit', (req,res) => {
 	Beast.findById(req.params.id, (err, foundBeast) => {
 		res.render('edit.ejs', {
-			beast: foundBeast
+			beast: foundBeast, currentUser: req.session.currentUser
 		})
 	})
 })
