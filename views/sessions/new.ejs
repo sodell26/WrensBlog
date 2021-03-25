@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<%- include('../partials/header.ejs') %>
+<%- include('../partials/nav.ejs') %>
+<h1 class="homeh1">Wren's Monster Blog</h1>
+
+<h4>Login</h4>
+
+<form action="/sessions" method="POST">
+	<label>
+		<span>Username:</span>
+		<input type="text" name="username"/>
+	</label>
+
+	<label>
+		<span>Password:</span>
+		<input type="password" name="password">
+	</label>
+	<br>
+	<br>
+	<input type="submit" value="Login">
+	
+</form>
+
+<%- include('../partials/footer.ejs') %>

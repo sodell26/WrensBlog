@@ -1,6 +1,21 @@
 <ul class="my-navbar">
-  <li><a href="/wren">Home</a></li>
+  <li><a href="/">Home</a></li>
   <li><a href="/wren/blog">Blog</a></li>
   <li><a href="#">Contact</a></li>
   <li><a href="#">About Wren</a></li>
+  <% if (currentUser) { %>
+    <li>Welcome <%currentUser.username %></li>
+    <li>
+      <form action="/sessions?_method=DELETE" method="POST">
+        <input type="submit" name="Log Out">
+      </form>
+    </li>
+  <% } else { %>
+        <li class="right-nav"><a href="/users/new">Create Account</a></li>
+        <li class="right-nav"><a href="/sessions/new">Log In</a></li>
+  <% } %>
 </ul>
+
+<div class="content">
+
+  <h1 class="homeh1">Wren's Monster Blog</h1>

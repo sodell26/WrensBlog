@@ -1,5 +1,13 @@
 body {
 	background: url("https://cdn.pixabay.com/photo/2015/09/09/16/05/forest-931706_1280.jpg") no-repeat center center fixed;
+	background-size: cover;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #ffffff5c;
 }
 
 .my-navbar{
@@ -14,18 +22,22 @@ body {
 	float: left;
 }
 
+.my-navbar .right-nav {
+	float: right;
+}
+
 .my-navbar li a {
 	display: block;
 	color: #8BC4A6;
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
+	transition: 0.5s;
 }
 
 .my-navbar li a:hover {
 	background-color: #0D2B2A;
 }
-
 
 .homeh1 {
 	text-align: center;
@@ -35,9 +47,13 @@ body {
 	background: rgba(255,255,255,1);
 }
 
+.carousel-item {
+	text-align: center;
+}
+
 .carousel-inner img{
-	width: 400px;
-	height: 400px !important;
+	height: 400px;
+	display: inline-block;
 }
 
 .homeBlurb {
@@ -67,6 +83,7 @@ body {
 	background:  rgba(255,255,255,1);
 	width: 150px;
 	height: 130px;
+	border-radius: 20px
 }
 
 .beast-link {
@@ -127,6 +144,11 @@ p {
 }
 
 footer {
-	text-align: center;
 	color: #8BC4A6;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+
 }
