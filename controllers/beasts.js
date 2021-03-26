@@ -18,10 +18,10 @@ const Beast = require('../models/beastsModel.js')
 
 
 
-// //home page <-- moved to server.js for sessions/users use
-// router.get('/', (req,res) => {
-// 	res.render('home.ejs')
-// })
+// //home page
+router.get('/', (req,res) => {
+	res.render('home.ejs')
+})
 
 //index
 router.get('/blog', (req,res) => {
@@ -85,7 +85,7 @@ router.get('/blog', (req,res) => {
 
 //new route
 router.get('/blog/new', (req,res) => {
-	res.render('new.ejs', {currentUser: req.session.currentUser})
+		res.render('new.ejs', {currentUser: req.session.currentUser})
 })
 
 //show route

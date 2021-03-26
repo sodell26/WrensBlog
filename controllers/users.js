@@ -9,6 +9,22 @@ router.get('/new', (req,res) => {
 	res.render('users/new.ejs', {currentUser: req.session.currentUser})
 })
 
+// user seed route
+// router.get('/new/seed', (req,res)=> {
+// 	User.create([
+// 	{
+// 		username:"Wren",
+// 		password:"IDontKillTh3m",
+// 		admin:true
+// 	}
+// 	], (err, data) => {
+// 		if (err) {
+// 			console.log(err)
+// 		}
+// 		res.redirect('/sessions/new')
+// 	})
+// })
+
 //user create route
 router.post('/', (req,res) => {
 	req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(13))
@@ -19,7 +35,8 @@ router.post('/', (req,res) => {
 				res.send('User already exists!')
 			}
 		} else {
-			res.send(createdUser)
+			console.log(createdUser)
+			res.rediret('/')
 		}
 	})
 })

@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
-const port = process.env.Port;
+const PORT = process.env.PORT;
 const session = require('express-session')
 
 
@@ -61,6 +61,6 @@ app.get('/', (req,res) => {
 	})
 })
 
-app.listen(port, () => {
+app.listen(PORT, () => {
 	console.log("Be very quiet...")
 })

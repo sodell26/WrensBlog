@@ -1,20 +1,24 @@
-<ul class="my-navbar">
+
+<nav>
+  <ul class="my-navbar">
   <li><a href="/">Home</a></li>
   <li><a href="/wren/blog">Blog</a></li>
   <li><a href="#">Contact</a></li>
   <li><a href="#">About Wren</a></li>
   <% if (currentUser) { %>
-    <li>Welcome <%currentUser.username %></li>
-    <li>
+  <li class="right-nav">
       <form action="/sessions?_method=DELETE" method="POST">
-        <input type="submit" name="Log Out">
+        <input class="btn btn-light logout-btn" type="submit" value="Log Out">
       </form>
     </li>
+    <li class="right-nav nav-name">Hello <%=currentUser.username %></li>
   <% } else { %>
         <li class="right-nav"><a href="/users/new">Create Account</a></li>
         <li class="right-nav"><a href="/sessions/new">Log In</a></li>
   <% } %>
 </ul>
+
+</nav>
 
 <div class="content">
 

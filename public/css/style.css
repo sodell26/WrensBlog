@@ -36,7 +36,23 @@ body {
 }
 
 .my-navbar li a:hover {
+	padding: 14px 16px;
 	background-color: #0D2B2A;
+	transition: 0.5s;
+}
+
+.my-navbar .nav-name {
+	display: block;
+	color: #8BC4A6;
+	text-align: center;
+	padding: 14px 16px;
+}
+
+.logout-btn {
+	padding: 14px 16px;
+	color: #F5EBC6;
+	background-color: #0D2B2A;
+	margin-top: 
 }
 
 .homeh1 {
@@ -81,8 +97,8 @@ body {
 
 .link-pic {
 	background:  rgba(255,255,255,1);
-	width: 150px;
-	height: 130px;
+	width: 200px;
+	height: 200px;
 	border-radius: 20px
 }
 

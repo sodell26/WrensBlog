@@ -1,39 +1,37 @@
 const bcrypt = require('bcrypt');
 const express = require('express');
-const router = express.Router();
+const sessions = express.Router();
 const User = require('../models/users');
 
 
 //session new route
-router.get('/new', (req,res) => {
+sessions.get('/new', (req,res) => {
 	res.render('sessions/new.ejs', {currentUser: req.session.currentUser})
 })
 
 //user login
-router.post('/', (req,res) => {
+sessions.post('/', (req,res) => {
 	User.findOne({ username: req.body.username}, (err, foundUser) => {
 		if (err) {
 			res.send(err)
-		} else {
-			if(foundUser) {
-				console.log(foundUser)
-				if(bcrypt.compareSync(req.body.password, foundUser.password)) {
-					req.session.currentUser = foundUser
-					res.redirect('/')
+		} else if (!foundUser){
+			res.send('<a href="/sessions/new">user not found</a>')
 				} else {
-					res.send('<h1>invalid password</h1>')
-				}
+					if (bcrypt.compareSync(req.body.password, foundUser.password)) {
+						req.session.currentUser = foundUser
+						res.redirect('/wren/blog')
 			} else {
-				res.send("<h1>user not found</h1>")
+				res.send('<a href="/sessions/new"> password does not match</a>')
 			}
 		}
 	})
 })
 
-router.delete('/', (req,res) => {
+sessions.delete('/', (req,res) => {
 	req.session.destroy(()=> {
 		res.redirect('/')
 	})
 })
 
-module.exports = router;
+module.exports = sessions;
+
