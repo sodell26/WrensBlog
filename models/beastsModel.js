@@ -6,7 +6,7 @@ const beastSchema = new Schema({
 	location: String,
 	description: String,
 	dispatched: Boolean,
-	img: String
+	img:String
 });
 
 const Beast = model('Beast', beastSchema)

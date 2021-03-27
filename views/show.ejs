@@ -8,9 +8,16 @@
 	<p><%= beast.description%></p>
 </div>
 <a href="/wren/blog"><button class="btn btn-info back-btn">Back to Blog Listings</button></a>
+
+<% if (currentUser && currentUser.admin) {%>
+
 <a href="/wren/blog/<%=beast.id%>/edit"><button class="btn btn-warning edit-btn">Edit Post</button></a>
+<%}%>
+
+<% if (currentUser && currentUser.admin) {%>
 <form method='POST' action="/wren/blog/<%=beast.id%>/?_method=DELETE">
 	<button class="btn btn-danger delete-btn">Delete post</button>
 </form>
+<% } %>
 
 <%- include('./partials/footer.ejs') %>

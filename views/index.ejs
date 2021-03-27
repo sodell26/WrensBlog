@@ -20,8 +20,13 @@
 				</div>
 			<% } %>
 	</div>
-<div class="btn-center">
-	<a class="btn btn-light new-btn" href="/wren/blog/new">Add a new beast</a>
-</div>
+<% if (currentUser && currentUser.admin) {%>
+
+	<div class="btn-center">
+		<a class="btn btn-light new-btn" href="/wren/blog/new">Add a new beast</a>
+	</div>
+<% } %>
+
+
 
 <%- include('./partials/footer.ejs') %>
