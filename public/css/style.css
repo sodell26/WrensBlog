@@ -76,9 +76,9 @@ body {
 	margin-top: 20px;
 }
 
-.homeBlurb p {
-	background: rgb(13, 43, 42, 1);
-	color: #F5EBC6;
+.homeBlurb p, h4{
+	text-align: center;
+	color: #0D2B2A;
 }
 
 .beast-item {
@@ -99,7 +99,15 @@ body {
 	background:  rgba(255,255,255,1);
 	width: 200px;
 	height: 200px;
-	border-radius: 20px
+	border-radius: 20px;
+	transition: 0.3s ease-out;
+
+
+}
+
+.link-pic:hover {
+	transform: scale(1.5);
+	transition: 0.5s;
 }
 
 .beast-link {
@@ -151,6 +159,7 @@ body {
 
 .blog-blurb {
 	background: rgb(124, 145, 130, 1);
+	margin-top: 20px;
 	margin-left: 5%;
 	margin-right: 5%;
 }
@@ -165,7 +174,7 @@ p {
 
 footer {
 	color: #8BC4A6;
-	position: fixed;
+	position: relative;
 	left: 0;
 	bottom: 0;
 	width: 100%;
