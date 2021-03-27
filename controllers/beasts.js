@@ -37,51 +37,51 @@ router.get('/blog', (req,res) => {
 })
 
 //seed
-// router.get('/seed', (req,res) => {
-// 	Beast.create([
-// 	{
-// 		name:"Griffin",
-// 		location: "Greece",
-// 		description: "Territorial beast. Has the body, tail, and back legs of a lion; the head and wings of an eagle; and sometimes an eagle's talons as its front feet.",
-// 		dispatched: true,
-// 		img: "https://cdn.pixabay.com/photo/2019/02/25/00/54/griffin-4018762_1280.png"
-// 	},
-// 	{
-// 		name:"Cockatrice",
-// 		location:"England",
-// 		description: "Has a nasty look in its eye. It's essentially a two-legged dragon or serpent-like creature with a rooster's head.",
-// 		dispatched: true,
-// 		img: "https://cdn.pixabay.com/photo/2016/03/31/21/38/basilisk-1296543_1280.png"
-// 	},
-// 	{
-// 		name: "Gorgon",
-// 		location: "Greece",
-// 		description:"Don't look at one directly, has a stone-cold look. Part snake, part woman - has living snakes for hair. ",
-// 		dispatched: true,
-// 		img: "https://cdn.pixabay.com/photo/2017/01/31/21/46/amulet-2027504_1280.png"
-// 	},
-// 	{
-// 		name: "Sea Serpent",
-// 		location: "off the coast of Norway",
-// 		description: "A limbless water creature longer than most ships and likes the taste of sailors. Has a venomous bite and scales to match the water, making it nearly invisible.",
-// 		dispatched: true,
-// 		img: "https://ipswich.files.wordpress.com/2018/11/nahant-sea-serpent.jpg"
-// 	},
-// 	{
-// 		name: "Wendigo",
-// 		location: "North America",
-// 		description:"Believed to have once been a human that now hunts those lost in the woods. Can mimick the sounds of humans. It is humanoid in shape, but gaunt. The head resembles the skull of a stag and has a terrible smell.",
-// 		dispatched: true,
-// 		img: "https://bengalspurr.com/wp-content/uploads/2019/06/Wendigo-e1560276946456.jpg"
-// 	}
+router.get('/seed', (req,res) => {
+	Beast.create([
+	{
+		name:"Griffin",
+		location: "Greece",
+		description: "Territorial beast. Has the body, tail, and back legs of a lion; the head and wings of an eagle; and sometimes an eagle's talons as its front feet.",
+		dispatched: true,
+		img: "https://cdn.pixabay.com/photo/2019/02/25/00/54/griffin-4018762_1280.png"
+	},
+	{
+		name:"Cockatrice",
+		location:"England",
+		description: "Has a nasty look in its eye. It's essentially a two-legged dragon or serpent-like creature with a rooster's head.",
+		dispatched: true,
+		img: "https://cdn.pixabay.com/photo/2016/03/31/21/38/basilisk-1296543_1280.png"
+	},
+	{
+		name: "Gorgon",
+		location: "Greece",
+		description:"Don't look at one directly, has a stone-cold look. Part snake, part woman - has living snakes for hair. ",
+		dispatched: true,
+		img: "https://cdn.pixabay.com/photo/2017/01/31/21/46/amulet-2027504_1280.png"
+	},
+	{
+		name: "Sea Serpent",
+		location: "off the coast of Norway",
+		description: "A limbless water creature longer than most ships and likes the taste of sailors. Has a venomous bite and scales to match the water, making it nearly invisible.",
+		dispatched: true,
+		img: "https://ipswich.files.wordpress.com/2018/11/nahant-sea-serpent.jpg"
+	},
+	{
+		name: "Wendigo",
+		location: "North America",
+		description:"Believed to have once been a human that now hunts those lost in the woods. Can mimick the sounds of humans. It is humanoid in shape, but gaunt. The head resembles the skull of a stag and has a terrible smell.",
+		dispatched: true,
+		img: "https://bengalspurr.com/wp-content/uploads/2019/06/Wendigo-e1560276946456.jpg"
+	}
 
-// 	], (err, data) => {
-// 		if (err) {
-// 			console.log(err)
-// 		}
-// 		res.redirect('/wren/blog')
-// 	})
-// })
+	], (err, data) => {
+		if (err) {
+			console.log(err)
+		}
+		res.redirect('/wren/blog')
+	})
+})
 
 //new route
 router.get('/blog/new', (req,res) => {
